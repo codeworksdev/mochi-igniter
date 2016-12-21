@@ -12,6 +12,7 @@ class Pages extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('mochi');
         $this->load->model('pages_model');
     }
 
@@ -21,12 +22,7 @@ class Pages extends CI_Controller
         else
         {
             $data = array(
-                'mochi' => (object) array(
-                    'jsOnloadPage' => 'frontend/js/pages/'.$page.'.js',
-                    'pageTitle'    => $this->pages_model->get_page_title($page),
-                    'version'      => '1.0.0',
-                    'viewName'     => $page,
-                    )
+                'mochi' => $this->mochi->get_page_meta($page, $this)
                 );
 
             $this->load->view( 'templates/header', $data );
