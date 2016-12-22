@@ -9,9 +9,9 @@ defined('BASEPATH') or exit;
 
 class Pages extends CI_Controller
 {
-    const MY_APP_AUTHOR   = 'CODEWORKS';
-    const MY_APP_NAME     = 'Mochi Igniter Web Application';
-    const MY_APP_VERSION  = '1.0';
+    const MY_APP_AUTHOR  = 'CODEWORKS';
+    const MY_APP_NAME    = 'Mochi Igniter Web Application';
+    const MY_APP_VERSION = '1.0';
 
     public function __construct()
     {
